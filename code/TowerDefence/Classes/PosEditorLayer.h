@@ -5,6 +5,12 @@
 
 using namespace cocos2d;
 
+enum EnumPosType{
+	enTowerPos,
+	enMonsterPos
+};
+
+
 class PosEditorLayer: public Layer
 {
 public:
@@ -13,6 +19,13 @@ public:
 	CREATE_FUNC(PosEditorLayer);
 	virtual bool init();
 
+private:
+	void preLoad();
+	void editPos(Point pos);
+
+	int _currentLevel;
+	EnumPosType _posType;
+	
 };
 
 #endif
