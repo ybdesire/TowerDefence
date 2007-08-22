@@ -72,3 +72,33 @@ void PosBase::draw(Renderer *renderer, const Mat4& transform, uint32_t flags)
 		glLineWidth(1);
 	}
 }
+
+bool PosBase::isClickMe(Point pos)
+{
+	float radius;
+
+	if(_posType == enTowerPos)
+	{
+		radius = Tower_Radius;
+	}
+	else
+	{
+		radius = Monster_Radius;
+	}
+
+	Point srcPoint = Point(_pos.x-radius, _pos.y-radius);
+	Point dstPoint = Point(_pos.x+radius, _pos.y+radius);
+
+	if( (pos.x >= srcPoint.x && pos.x<=dstPoint.x) && (pos.y>=srcPoint.y && pos.y<=dstPoint.y) )
+	{
+		return true;
+	}
+
+	else
+		return false;
+		
+
+}
+
+
+

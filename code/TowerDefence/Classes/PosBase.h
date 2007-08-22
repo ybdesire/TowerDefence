@@ -19,6 +19,7 @@ public:
 	virtual bool init(Point pos, EnumPosType posType, bool isDebug);
 	static PosBase *create(Point pos, EnumPosType posType, bool isDebug);
 	virtual void draw(Renderer *renderer, const Mat4& transform, uint32_t flags);
+	bool isClickMe(Point pos);
 
 protected:
 	CC_SYNTHESIZE(Point,_pos,Pos);
