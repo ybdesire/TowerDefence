@@ -57,6 +57,64 @@ void PosEditorLayer::preLoad()
 
 void PosEditorLayer::editPos(Point pos)
 {
-	auto posBase = PosBase::create(pos, _posType, true);
-	this->addChild(posBase);
+	auto posbase = findExistPos(pos);
+
+	if(posbase)
+	{
+		deletePosBase(posbase);
+	}
+	else
+	{
+		createPos(pos);
+	}
 }
+
+PosBase *PosEditorLayer::findExistPos(Point pos)
+{
+	Vector<PosBase*> posList;
+	if(_posType==enTowerPos)
+	{
+		posList = towerPoBaseList;
+	}
+	else
+	{
+		posList = monsterPoBaseList;
+	}
+
+	for(auto ref:posList)
+	{
+		if(ref->isClickMe(pos))
+			return ref;
+	}
+	return nullptr;
+}
+
+void PosEditorLayer::createPos(Point pos)
+{
+	auto posbase = PosBase::create(pos, _posType, true);
+	this->addChild(posbase);
+
+	if(_posType==enMonsterPos)
+	{
+		monsterPoBaseList.pushBack(posbase);
+	}
+	else if(_posType==enTowerPos)
+	{
+		towerPoBaseList.pushBack(posbase);
+	}
+}
+
+void PosEditorLayer::deletePosBase(PosBase *posbase)
+{
+	this->removeChild(posbase);
+	
+		if(_posType==enMonsterPos)
+	{
+		monsterPoBaseList.eraseObject(posbase);
+	}
+	else if(_posType==enTowerPos)
+	{
+		towerPoBaseList.eraseObject(posbase);
+	}
+}
+

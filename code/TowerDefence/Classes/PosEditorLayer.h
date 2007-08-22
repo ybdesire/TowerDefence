@@ -16,11 +16,17 @@ public:
 	virtual bool init();
 
 private:
-	void preLoad();
-	void editPos(Point pos);
+	void preLoad();//load level related background
+	void editPos(Point pos);//create a pos or do nothing(choose the same area)
+	void createPos(Point pos);//create position base
+	PosBase *findExistPos(Point pos);
+	void deletePosBase(PosBase *posbase);
 
 	int _currentLevel;
 	EnumPosType _posType;
+
+	Vector<PosBase*> towerPoBaseList;
+	Vector<PosBase*> monsterPoBaseList;
 	
 };
 
