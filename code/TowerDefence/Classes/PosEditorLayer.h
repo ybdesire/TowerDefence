@@ -2,13 +2,9 @@
 #define _POSEDITORLAYER_H_
 
 #include "cocos2d.h"
+#include "PosBase.h"
 
 using namespace cocos2d;
-
-enum EnumPosType{
-	enTowerPos,
-	enMonsterPos
-};
 
 
 class PosEditorLayer: public Layer

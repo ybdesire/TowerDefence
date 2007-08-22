@@ -1,8 +1,9 @@
 #include "PosEditorLayer.h"
+#include "PosBase.h"
 
 PosEditorLayer::PosEditorLayer()
 {
-	_currentLevel = 1;
+	_currentLevel = 2;
 	_posType = enTowerPos;
 }
 
@@ -56,4 +57,6 @@ void PosEditorLayer::preLoad()
 
 void PosEditorLayer::editPos(Point pos)
 {
+	auto posBase = PosBase::create(pos, _posType, true);
+	this->addChild(posBase);
 }
