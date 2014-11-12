@@ -1,0 +1,6 @@
+Create Cocos2d-x 3.0 Project by cocos command:
+
+#cd Cocos\frameworks\cocos2d-x\tools\cocos2d-console\bin
+#cocos new -p TowerDefence -l cpp TowerDefence
+
+Then we get a project named TowerDefence at the same directory.

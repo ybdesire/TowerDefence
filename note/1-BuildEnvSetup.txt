@@ -1,0 +1,6 @@
+1. Win7.
+2. Download Cocos engine V1.0 Preview(integrated Cocos2d-x v3.3RC0，Cocos Studio v2.0Beta0，Cocos Code IDE V1.0.1，Cocos Launcher v1.0Alpha0).
+3. Install VS2012, python2.7.3, and Cocos engine V1.0.
+4. Setup environment for python.
+
+Building environment setup steps can be referred to http://cn.cocos2d-x.org/article/index?type=cocos2d-x&url=/doc/cocos-docs-master/manual/framework/native/v2/getting-started/setting-up-development-environments/windows-7-environment-setup/setup-win32-development-environment/zh.md
