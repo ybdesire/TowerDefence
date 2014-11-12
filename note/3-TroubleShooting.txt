@@ -1,0 +1,5 @@
+1. GLView::create() should be replaced by GLViewImpl::create at cocos-2dx v3.x.
+
+2. path of extensions should be added to project properties->Configuration Proterties->VC++ Directories->Include Directories.
+
+3.
