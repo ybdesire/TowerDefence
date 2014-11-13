@@ -1,19 +1,19 @@
-#include "mainScene.h"
+#include "MainScene.h"
 //#include "lvlChoose.h"
 //#include "positionEditScene.h"
 
-mainScene::mainScene()
+MainScene::MainScene()
 {
 }
 
-mainScene::~mainScene()
+MainScene::~MainScene()
 {
 }
 
-Scene *mainScene::createScene()
+Scene *MainScene::createScene()
 {
 	auto scene = Scene::create();
-	auto layer = mainScene::create();//create() defined by CREATE_FUNC(), this func will call init()
+	auto layer = MainScene::create();//create() defined by CREATE_FUNC(), this func will call init()
 
 	scene->addChild(layer);
 
@@ -21,7 +21,7 @@ Scene *mainScene::createScene()
 }
 
 
-bool mainScene::init()
+bool MainScene::init()
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();//get current visible size
 	
@@ -34,7 +34,7 @@ bool mainScene::init()
 	return true;
 }
 
-void mainScene::createChooseMenu()
+void MainScene::createChooseMenu()
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	
@@ -44,13 +44,13 @@ void mainScene::createChooseMenu()
 	
 	auto title = Label::create("Start","Arial",35);
 	title->setPosition(ccp(60, 60));
-	auto startItem = MenuItemImage::create(norImg, lightImg, CC_CALLBACK_1(mainScene::startGame,this));
+	auto startItem = MenuItemImage::create(norImg, lightImg, CC_CALLBACK_1(MainScene::startGame,this));
 	startItem->addChild(title);
 
 	
     title = Label::create("Editor","Arial",35);
 	title->setPosition(ccp(60, 60));
-	auto editorItem = MenuItemImage::create(norImg, lightImg, CC_CALLBACK_1(mainScene::editorScene,this));
+	auto editorItem = MenuItemImage::create(norImg, lightImg, CC_CALLBACK_1(MainScene::editorScene,this));
 	editorItem->addChild(title);
 	
 	
@@ -62,14 +62,14 @@ void mainScene::createChooseMenu()
 	this->addChild(menu);
 }
 
-void mainScene::editorScene(Ref *pSender)
+void MainScene::editorScene(Ref *pSender)
 {
 	CCLOG("YB editor scene");
 	//auto scene = positionEditScene::createScene();
 	//Director::getInstance()->replaceScene(scene);
 }
 
-void mainScene::startGame(Ref *pSender)
+void MainScene::startGame(Ref *pSender)
 {
 	//auto lvlChooseScene = lvlChoose::createScene();
 	//Director::getInstance()->replaceScene(lvlChooseScene);
