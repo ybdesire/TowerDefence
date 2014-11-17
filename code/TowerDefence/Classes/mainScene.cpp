@@ -1,5 +1,5 @@
 #include "MainScene.h"
-//#include "lvlChoose.h"
+#include "lvlChooseScene.h"
 //#include "positionEditScene.h"
 
 MainScene::MainScene()
@@ -71,8 +71,8 @@ void MainScene::editorScene(Ref *pSender)
 
 void MainScene::startGame(Ref *pSender)
 {
-	//auto lvlChooseScene = lvlChoose::createScene();
-	//Director::getInstance()->replaceScene(lvlChooseScene);
+	auto lvlChooseScene = lvlChooseScene::createScene();
+	Director::getInstance()->replaceScene(lvlChooseScene);
 
 	CCLOG("YB start Game");
 }
