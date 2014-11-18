@@ -1,4 +1,5 @@
 #include "PosEditorScene.h"
+#include "GetBackLayer.h"
 
 
 PosEditorScene::PosEditorScene()
@@ -16,6 +17,9 @@ Scene *PosEditorScene::createScene()
 
 	//auto posEditorLay = PosEditorLayer::create();
 	//scene->addChild(posEditorLay);
+
+	auto getBackLayer = GetBackLayer::create();
+	scene->addChild(getBackLayer);
 
 	return scene;
 }

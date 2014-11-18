@@ -1,6 +1,6 @@
 #include "MainScene.h"
 #include "lvlChooseScene.h"
-//#include "positionEditScene.h"
+#include "PosEditorScene.h"
 
 MainScene::MainScene()
 {
@@ -65,8 +65,8 @@ void MainScene::createChooseMenu()
 void MainScene::editorScene(Ref *pSender)
 {
 	CCLOG("YB editor scene");
-	//auto scene = positionEditScene::createScene();
-	//Director::getInstance()->replaceScene(scene);
+	auto scene = PosEditorScene::createScene();
+	Director::getInstance()->replaceScene(scene);
 }
 
 void MainScene::startGame(Ref *pSender)
