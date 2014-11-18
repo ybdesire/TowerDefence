@@ -10,32 +10,77 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="resource\Button">
+      <UniqueIdentifier>{afb7140a-0179-44ec-8a70-3e90982a6f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\game">
+      <UniqueIdentifier>{4b369e9b-658a-4fed-8bf7-5c1012c1fcff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\fonts">
+      <UniqueIdentifier>{2a51458f-3d12-4c23-8397-a3c9e8831291}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\AppDelegate.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\HelloWorldScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\MainScene.cpp" />
+    <ClCompile Include="..\Classes\lvlChooseScene.cpp" />
+    <ClCompile Include="..\Classes\PosEditorScene.cpp" />
+    <ClCompile Include="..\Classes\PosEditorLayer.cpp" />
+    <ClCompile Include="..\Classes\GetBackLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\AppDelegate.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\HelloWorldScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\MainScene.h" />
+    <ClInclude Include="..\Classes\lvlChooseScene.h" />
+    <ClInclude Include="..\Classes\PosEditorScene.h" />
+    <ClInclude Include="..\Classes\PosEditorLayer.h" />
+    <ClInclude Include="..\Classes\GetBackLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\Button\choose_btn_light.png">
+      <Filter>resource\Button</Filter>
+    </Image>
+    <Image Include="..\res\Button\choose_btn_nor.png">
+      <Filter>resource\Button</Filter>
+    </Image>
+    <Image Include="..\res\Button\public_ui_blue_btn.png">
+      <Filter>resource\Button</Filter>
+    </Image>
+    <Image Include="..\res\Button\public_ui_green_btn.png">
+      <Filter>resource\Button</Filter>
+    </Image>
+    <Image Include="..\res\Button\public_ui_orange_btn.png">
+      <Filter>resource\Button</Filter>
+    </Image>
+    <Image Include="..\res\game\level_1.jpg">
+      <Filter>resource\game</Filter>
+    </Image>
+    <Image Include="..\res\game\level_2.jpg">
+      <Filter>resource\game</Filter>
+    </Image>
+    <Image Include="..\res\game\level_3.jpg">
+      <Filter>resource\game</Filter>
+    </Image>
+    <Image Include="..\res\game\MainSceneBG.jpg">
+      <Filter>resource\game</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\res\fonts\Marker Felt.ttf">
+      <Filter>resource\fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>
