@@ -40,7 +40,7 @@ bool PosBase::init(Point pos, EnumPosType posType, bool isDebug)
 	return true;
 }
 
-void PosBase::draw(Renderer *renderer, const kmMat4 &transform, bool transformUpdated)
+void PosBase::draw(Renderer *renderer, const Mat4& transform, uint32_t flags)
 {
 	if(_isDebug)
 	{
