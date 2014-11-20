@@ -46,7 +46,7 @@ bool lvlChooseScene::init()//create() function will call init()
 
 Label* lvlChooseScene::createLvlLabel(const char *lvlstr)
 {
-	auto lvlLable = Label::create(lvlstr, "Arial", 60);
+	auto lvlLable = Label::create(lvlstr, "Arial", 20);
 	lvlLable->setColor(Color3B::RED);
 	lvlLable->setPosition(ccp(60, 60));//Button size is 130x130
 	return lvlLable;

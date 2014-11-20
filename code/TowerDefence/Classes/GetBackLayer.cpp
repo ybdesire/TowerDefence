@@ -19,7 +19,7 @@ bool GetBackLayer::init()
 
 	auto getBackBtn = ControlButton::create(btnTitle, norBtnSprite);
 	getBackBtn->setBackgroundSpriteForState(highlightBtnSprite, Control::State::HIGH_LIGHTED);
-	getBackBtn->setPosition(visibleSize.width - norBtnSprite->getContentSize().width/2, visibleSize.height/2 - norBtnSprite->getContentSize().height);
+	getBackBtn->setPosition(visibleSize.width - norBtnSprite->getContentSize().width/2, visibleSize.height - norBtnSprite->getContentSize().height);
 
 	getBackBtn->addTargetWithActionForControlEvents(this, cccontrol_selector(GetBackLayer::getBack), Control::EventType::TOUCH_UP_INSIDE);
 
