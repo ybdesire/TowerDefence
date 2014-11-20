@@ -3,7 +3,7 @@
 
 PosEditorLayer::PosEditorLayer()
 {
-	_currentLevel = 2;
+	_currentLevel = 1;
 	_posType = enTowerPos;
 }
 
