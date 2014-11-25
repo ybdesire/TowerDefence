@@ -147,6 +147,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\Classes\MainScene.cpp" />
     <ClCompile Include="..\Classes\PosBase.cpp" />
     <ClCompile Include="..\Classes\PosEditorLayer.cpp" />
+    <ClCompile Include="..\Classes\PosEditorOpLayer.cpp" />
     <ClCompile Include="..\Classes\PosEditorScene.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -158,6 +159,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\MainScene.h" />
     <ClInclude Include="..\Classes\PosBase.h" />
     <ClInclude Include="..\Classes\PosEditorLayer.h" />
+    <ClInclude Include="..\Classes\PosEditorOpLayer.h" />
     <ClInclude Include="..\Classes\PosEditorScene.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
