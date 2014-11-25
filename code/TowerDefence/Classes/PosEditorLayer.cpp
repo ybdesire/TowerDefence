@@ -118,3 +118,14 @@ void PosEditorLayer::deletePosBase(PosBase *posbase)
 	}
 }
 
+void PosEditorLayer::changePBType()
+{
+}
+
+void PosEditorLayer::editNextLevel()
+{
+}
+
+void PosEditorLayer::editPreLevel()
+{
+}

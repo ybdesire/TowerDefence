@@ -15,11 +15,16 @@ public:
 	CREATE_FUNC(PosEditorLayer);
 	virtual bool init();
 
+	void outPutToPositionListFile();
+	void changePBType();//change position base type
+	void editNextLevel();
+	void editPreLevel();
+
 private:
 	void preLoad();//load level related background
 	void editPos(Point pos);//create a pos or do nothing(choose the same area)
 	void createPos(Point pos);//create position base
-	PosBase *findExistPos(Point pos);
+	PosBase *findExistPos(Point pos);//find exist position base at the 2 vector
 	void deletePosBase(PosBase *posbase);
 
 	int _currentLevel;
