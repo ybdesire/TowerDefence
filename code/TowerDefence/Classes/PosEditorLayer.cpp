@@ -129,3 +129,8 @@ void PosEditorLayer::editNextLevel()
 void PosEditorLayer::editPreLevel()
 {
 }
+
+void PosEditorLayer::outPutToPositionListFile()
+{
+	CCLOG("output");
+}

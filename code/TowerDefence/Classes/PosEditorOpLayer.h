@@ -19,7 +19,8 @@ public:
 
 private:
 	void addControls();
-
+	void addOutPutCtr(Size size);
+	void outputPosToPlistFile(Ref* pSender,Control::EventType event);
 
 	PosEditorLayer *_editorLayer;
 };

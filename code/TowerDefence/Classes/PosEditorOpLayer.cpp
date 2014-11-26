@@ -34,6 +34,7 @@ bool PosEditorOpLayer::init(PosEditorLayer *layer)
 		return false;
 	}
 	CC_SAFE_RETAIN(layer);
+	_editorLayer = layer;
 
 	addControls();
 
@@ -42,7 +43,31 @@ bool PosEditorOpLayer::init(PosEditorLayer *layer)
 
 void PosEditorOpLayer::addControls()
 {
-
+	auto visibleSize = Director::getInstance()->getVisibleSize();
+	addOutPutCtr(visibleSize);
 }
 
+void PosEditorOpLayer::addOutPutCtr(Size visibleSize)
+{
+	auto btnTitle = Label::create("output", "Arial", 30);
+	auto norSprite = Scale9Sprite::create("Button/public_ui_blue_btn.png");
+	auto hlSprite = Scale9Sprite::create("Button/public_ui_green_btn.png");
 
+	auto outputBtn = ControlButton::create(btnTitle, norSprite);
+	outputBtn->setBackgroundSpriteForState(hlSprite, Control::State::HIGH_LIGHTED);
+	outputBtn->setPosition(visibleSize.width-norSprite->getContentSize().width/2,
+		norSprite->getContentSize().height);
+
+	outputBtn->addTargetWithActionForControlEvents(
+		this,
+		cccontrol_selector(PosEditorOpLayer::outputPosToPlistFile),
+		Control::EventType::TOUCH_UP_INSIDE
+		);
+
+	this->addChild(outputBtn);
+}
+
+void PosEditorOpLayer::outputPosToPlistFile(Ref* pSender,Control::EventType event)
+{
+	_editorLayer->outPutToPositionListFile();
+}
