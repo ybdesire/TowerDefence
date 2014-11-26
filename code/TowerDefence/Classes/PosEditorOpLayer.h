@@ -6,7 +6,7 @@
 #include "PosEditorLayer.h"
 
 using namespace cocos2d;
-USING_NS_CC_EXT;
+using namespace cocos2d::extension;
 
 class PosEditorOpLayer: public Layer
 {
@@ -15,8 +15,12 @@ public:
 	~PosEditorOpLayer();
 
 	static PosEditorOpLayer *create(PosEditorLayer *layer);
+	virtual bool init(PosEditorLayer *layer);
 
 private:
+	void addControls();
+
+
 	PosEditorLayer *_editorLayer;
 };
 
