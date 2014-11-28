@@ -132,10 +132,12 @@ void PosEditorLayer::changePBType()
 
 void PosEditorLayer::editNextLevel()
 {
+	CCLOG("edit next level");
 }
 
 void PosEditorLayer::editPreLevel()
 {
+	CCLOG("edit previous level");
 }
 
 void PosEditorLayer::outPutToPositionListFile()

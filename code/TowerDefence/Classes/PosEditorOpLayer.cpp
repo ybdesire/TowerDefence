@@ -46,6 +46,7 @@ void PosEditorOpLayer::addControls()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	addOutPutCtr(visibleSize);
 	addPBTypeChgCtr(visibleSize);
+	addNextLvlCtr(visibleSize);
 }
 
 void PosEditorOpLayer::addOutPutCtr(Size visibleSize)
@@ -99,3 +100,30 @@ void PosEditorOpLayer::changePosBaseType(Ref* pSender,Control::EventType event)
 {
 	_editorLayer->changePBType();
 }
+
+
+void PosEditorOpLayer::addNextLvlCtr(Size visibleSize)
+{
+	auto btnTitle = Label::create("Next Level", "Arial", 30);
+	auto norSprite = Scale9Sprite::create("Button/public_ui_blue_btn.png");
+	auto hlSprite = Scale9Sprite::create("Button/public_ui_green_btn.png");
+
+	auto nextLvlBtn = ControlButton::create(btnTitle, norSprite);
+	nextLvlBtn->setBackgroundSpriteForState(hlSprite, Control::State::HIGH_LIGHTED);
+	nextLvlBtn->setPosition(visibleSize.width-norSprite->getContentSize().width/2,
+		norSprite->getContentSize().height*3);
+
+	nextLvlBtn->addTargetWithActionForControlEvents(
+		this,
+		cccontrol_selector(PosEditorOpLayer::changeToNextLvl),
+		Control::EventType::TOUCH_UP_INSIDE
+		);
+
+	this->addChild(nextLvlBtn);
+}
+
+void PosEditorOpLayer::changeToNextLvl(Ref *pSender, Control::EventType event)
+{
+	_editorLayer->editNextLevel();
+}
+

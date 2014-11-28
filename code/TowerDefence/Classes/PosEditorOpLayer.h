@@ -28,6 +28,11 @@ private:
 	void addPBTypeChgCtr(Size visibleSize);
 	void changePosBaseType(Ref *pSender, Control::EventType event);
 
+	void addNextLvlCtr(Size visibleSize);
+	void changeToNextLvl(Ref *pSender, Control::EventType event);
+
+	void addPreviousLvlCtr(Size visibleSize);
+	void changeToPreLvl(Ref *pSender, Control::EventType event);
 
 
 	PosEditorLayer *_editorLayer;
