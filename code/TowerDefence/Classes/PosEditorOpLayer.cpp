@@ -47,6 +47,7 @@ void PosEditorOpLayer::addControls()
 	addOutPutCtr(visibleSize);
 	addPBTypeChgCtr(visibleSize);
 	addNextLvlCtr(visibleSize);
+	addPreviousLvlCtr(visibleSize);
 }
 
 void PosEditorOpLayer::addOutPutCtr(Size visibleSize)
@@ -127,3 +128,28 @@ void PosEditorOpLayer::changeToNextLvl(Ref *pSender, Control::EventType event)
 	_editorLayer->editNextLevel();
 }
 
+
+void PosEditorOpLayer::addPreviousLvlCtr(Size visibleSize)
+{
+	auto btnTitle = Label::create("Pre Level", "Arial", 30);
+	auto norSprite = Scale9Sprite::create("Button/public_ui_blue_btn.png");
+	auto hlSprite = Scale9Sprite::create("Button/public_ui_green_btn.png");
+
+	auto preLvlBtn = ControlButton::create(btnTitle, norSprite);
+	preLvlBtn->setBackgroundSpriteForState(hlSprite, Control::State::HIGH_LIGHTED);
+	preLvlBtn->setPosition(visibleSize.width-norSprite->getContentSize().width/2,
+		norSprite->getContentSize().height*2);
+
+	preLvlBtn->addTargetWithActionForControlEvents(
+		this,
+		cccontrol_selector(PosEditorOpLayer::changeToPreLvl),
+		Control::EventType::TOUCH_UP_INSIDE
+		);
+
+	this->addChild(preLvlBtn);
+}
+
+void PosEditorOpLayer::changeToPreLvl(Ref *pSender, Control::EventType event)
+{
+	_editorLayer->editPreLevel();
+}
