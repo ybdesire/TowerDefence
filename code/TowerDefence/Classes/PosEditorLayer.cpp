@@ -132,11 +132,28 @@ void PosEditorLayer::changePBType()
 
 void PosEditorLayer::editNextLevel()
 {
+	if(_currentLevel==3)
+	{
+		return;
+	}
+
+	_currentLevel++;
+	deleteAllPB();
+	preLoad();
+
 	CCLOG("edit next level");
 }
 
 void PosEditorLayer::editPreLevel()
 {
+	if(_currentLevel==1)
+	{
+		return;
+	}
+
+	_currentLevel--;
+	deleteAllPB();
+	preLoad();
 	CCLOG("edit previous level");
 }
 
@@ -144,3 +161,11 @@ void PosEditorLayer::outPutToPositionListFile()
 {
 	CCLOG("output");
 }
+
+void PosEditorLayer::deleteAllPB()
+{
+	this->removeAllChildrenWithCleanup(true);//remote all children from PosEditorLayer(even the bg)
+	towerPoBaseList.clear();
+	monsterPoBaseList.clear();
+}
+
