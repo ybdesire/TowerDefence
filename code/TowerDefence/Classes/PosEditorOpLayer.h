@@ -19,8 +19,16 @@ public:
 
 private:
 	void addControls();
-	void addOutPutCtr(Size size);
-	void outputPosToPlistFile(Ref* pSender,Control::EventType event);
+
+	//Out put positions to file
+	void addOutPutCtr(Size visibleSize);
+	void outputPosToPlistFile(Ref* pSender, Control::EventType event);
+
+	//Change position base type at EnumPosType
+	void addPBTypeChgCtr(Size visibleSize);
+	void changePosBaseType(Ref *pSender, Control::EventType event);
+
+
 
 	PosEditorLayer *_editorLayer;
 };

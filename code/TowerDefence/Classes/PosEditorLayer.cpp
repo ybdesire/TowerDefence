@@ -120,6 +120,14 @@ void PosEditorLayer::deletePosBase(PosBase *posbase)
 
 void PosEditorLayer::changePBType()
 {
+	if(_posType==enTowerPos)
+	{
+		_posType=enMonsterPos;
+	}
+	else
+	{
+		_posType=enTowerPos;
+	}
 }
 
 void PosEditorLayer::editNextLevel()

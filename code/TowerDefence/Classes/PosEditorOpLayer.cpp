@@ -45,6 +45,7 @@ void PosEditorOpLayer::addControls()
 {
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	addOutPutCtr(visibleSize);
+	addPBTypeChgCtr(visibleSize);
 }
 
 void PosEditorOpLayer::addOutPutCtr(Size visibleSize)
@@ -70,4 +71,31 @@ void PosEditorOpLayer::addOutPutCtr(Size visibleSize)
 void PosEditorOpLayer::outputPosToPlistFile(Ref* pSender,Control::EventType event)
 {
 	_editorLayer->outPutToPositionListFile();
+}
+
+
+void PosEditorOpLayer::addPBTypeChgCtr(Size visibleSize)
+{
+	auto btnTitle = Label::create("Change Type", "Arial", 30);
+	auto norSprite = Scale9Sprite::create("Button/public_ui_blue_btn.png");
+	auto hlSprite = Scale9Sprite::create("Button/public_ui_green_btn.png");
+
+	auto chgTypeBtn = ControlButton::create(btnTitle, norSprite);
+	chgTypeBtn->setBackgroundSpriteForState(hlSprite, Control::State::HIGH_LIGHTED);
+	chgTypeBtn->setPosition(visibleSize.width-norSprite->getContentSize().width/2,
+		norSprite->getContentSize().height*4);
+
+	chgTypeBtn->addTargetWithActionForControlEvents(
+		this,
+		cccontrol_selector(PosEditorOpLayer::changePosBaseType),
+		Control::EventType::TOUCH_UP_INSIDE
+		);
+
+	this->addChild(chgTypeBtn);
+
+}
+
+void PosEditorOpLayer::changePosBaseType(Ref* pSender,Control::EventType event)
+{
+	_editorLayer->changePBType();
 }
