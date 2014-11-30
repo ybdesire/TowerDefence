@@ -20,5 +20,29 @@
         <key>y</key>
             <integer>121</integer>
     </dict>
+    <dict>
+        <key>x</key>
+            <integer>548</integer>
+        <key>y</key>
+            <integer>325</integer>
+    </dict>
+    <dict>
+        <key>x</key>
+            <integer>312</integer>
+        <key>y</key>
+            <integer>260</integer>
+    </dict>
+    <dict>
+        <key>x</key>
+            <integer>294</integer>
+        <key>y</key>
+            <integer>81</integer>
+    </dict>
+    <dict>
+        <key>x</key>
+            <integer>267</integer>
+        <key>y</key>
+            <integer>215</integer>
+    </dict>
 </array>
 </plist>

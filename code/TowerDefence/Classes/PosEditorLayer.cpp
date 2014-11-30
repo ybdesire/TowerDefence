@@ -47,12 +47,21 @@ bool PosEditorLayer::init()
 
 void PosEditorLayer::preLoad()
 {
+	//add map(BG image)
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 	auto sBG = __String::createWithFormat("game/level_%d.jpg", _currentLevel);
 	auto mapBg = Sprite::create(sBG->getCString());
 	mapBg->setPosition(ccp(visibleSize.width/2, visibleSize.height/2));
 	mapBg->setOpacity(150);
 	this->addChild(mapBg);
+
+	//add monster & tower
+	auto monsterFilePath = __String::createWithFormat("game/monster_level_%d.plist",_currentLevel);
+	auto towerFilePath = __String::createWithFormat("game/tower_level_%d.plist",_currentLevel);
+
+	PosLoadUtil::getInstance()->loadPosWithFile(monsterPoBaseList, enMonsterPos, monsterFilePath->getCString(), this, _currentLevel, true);
+	PosLoadUtil::getInstance()->loadPosWithFile(towerPoBaseList, enTowerPos, towerFilePath->getCString(), this, _currentLevel, true);
+
 }
 
 

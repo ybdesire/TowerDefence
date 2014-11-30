@@ -68,3 +68,19 @@ void PosLoadUtil::writePBlistToFile(Vector<PosBase*> pblist, const char *filePat
 	}
 }
 
+
+void PosLoadUtil::loadPosWithFile(Vector<PosBase*>& pblist, EnumPosType posType, const char *filePath, Node* container, int level, bool isDebug)
+{
+	auto valueVector = FileUtils::getInstance()->getValueVectorFromFile(filePath);
+	for(auto ref:valueVector)
+	{
+		auto tmp = ref.asValueMap();
+		auto pbx = tmp.at("x").asFloat();
+		auto pby = tmp.at("y").asFloat();
+
+		PosBase *tpb = PosBase::create(ccp(pbx, pby), posType, isDebug);
+		pblist.pushBack(tpb);
+
+		container->addChild(tpb, level);
+	}
+}
