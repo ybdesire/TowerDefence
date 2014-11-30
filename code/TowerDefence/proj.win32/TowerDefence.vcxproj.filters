@@ -33,6 +33,7 @@
     <ClCompile Include="..\Classes\GetBackLayer.cpp" />
     <ClCompile Include="..\Classes\PosBase.cpp" />
     <ClCompile Include="..\Classes\PosEditorOpLayer.cpp" />
+    <ClCompile Include="..\Classes\PosLoadUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -47,6 +48,7 @@
     <ClInclude Include="..\Classes\GetBackLayer.h" />
     <ClInclude Include="..\Classes\PosBase.h" />
     <ClInclude Include="..\Classes\PosEditorOpLayer.h" />
+    <ClInclude Include="..\Classes\PosLoadUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
