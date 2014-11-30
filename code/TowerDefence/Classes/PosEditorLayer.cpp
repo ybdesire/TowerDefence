@@ -1,5 +1,6 @@
 #include "PosEditorLayer.h"
 #include "PosBase.h"
+#include "PosLoadUtil.h"
 
 PosEditorLayer::PosEditorLayer()
 {
@@ -159,6 +160,12 @@ void PosEditorLayer::editPreLevel()
 
 void PosEditorLayer::outPutToPositionListFile()
 {
+	String *monsterListFilePath = String::createWithFormat("game/monster_level_%d.plist", _currentLevel);
+	String *towerListFilePath = String::createWithFormat("game/tower_level_%d.plist", _currentLevel);
+
+	PosLoadUtil::getInstance()->writePBlistToFile(monsterPoBaseList, monsterListFilePath->getCString());
+	PosLoadUtil::getInstance()->writePBlistToFile(towerPoBaseList, towerListFilePath->getCString());
+
 	CCLOG("output");
 }
 

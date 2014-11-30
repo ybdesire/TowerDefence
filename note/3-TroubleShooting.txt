@@ -2,4 +2,4 @@
 
 2. path of extensions should be added to project properties->Configuration Proterties->VC++ Directories->Include Directories.
 
-3.
+3. static member variable's init should be execuated at the .cpp file of the class.

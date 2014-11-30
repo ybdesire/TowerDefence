@@ -28,7 +28,6 @@ private:
 	static PosLoadUtil *_psLoadUtil;
 };
 
-PosLoadUtil *PosLoadUtil::_psLoadUtil = NULL;
 
 
 
