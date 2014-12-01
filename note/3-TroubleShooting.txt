@@ -3,3 +3,8 @@
 2. path of extensions should be added to project properties->Configuration Proterties->VC++ Directories->Include Directories.
 
 3. static member variable's init should be execuated at the .cpp file of the class.
+
+4. Error error C2562: 'std::_Callable_obj<_Ty>::_ApplyX' : 'void' function returning a value.
+	this is std::function bind error, please check std::function expression error.
+	such as commit 3b993eb2d2bd7de1ebd60cf1e5d4e94d194aabee
+
