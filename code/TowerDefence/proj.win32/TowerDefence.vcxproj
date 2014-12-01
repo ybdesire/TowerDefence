@@ -145,6 +145,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\HeroMgr.cpp" />
     <ClCompile Include="..\Classes\lvlChooseScene.cpp" />
+    <ClCompile Include="..\Classes\MainPlayer.cpp" />
     <ClCompile Include="..\Classes\MainScene.cpp" />
     <ClCompile Include="..\Classes\PosBase.cpp" />
     <ClCompile Include="..\Classes\PosEditorLayer.cpp" />
@@ -159,6 +160,7 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\HeroMgr.h" />
     <ClInclude Include="..\Classes\lvlChooseScene.h" />
+    <ClInclude Include="..\Classes\MainPlayer.h" />
     <ClInclude Include="..\Classes\MainScene.h" />
     <ClInclude Include="..\Classes\PosBase.h" />
     <ClInclude Include="..\Classes\PosEditorLayer.h" />

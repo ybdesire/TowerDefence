@@ -1,4 +1,5 @@
 #include "lvlChooseScene.h"
+#include "MainPlayer.h"
 
 lvlChooseScene::lvlChooseScene()
 {
@@ -55,15 +56,21 @@ Label* lvlChooseScene::createLvlLabel(const char *lvlstr)
 
 void lvlChooseScene::lvl1(Ref *pSender)
 {
+	MainPlayer *lvl1Player = MainPlayer::create(1);
+	this->addChild(lvl1Player);
 	CCLOG("level 1");
 }
 
 void lvlChooseScene::lvl2(Ref *pSender)
 {
+	MainPlayer *lvl2Player = MainPlayer::create(2);
+	this->addChild(lvl2Player);
 	CCLOG("level 2");
 }
 
 void lvlChooseScene::lvl3(Ref *pSender)
 {
+	MainPlayer *lvl3Player = MainPlayer::create(3);
+	this->addChild(lvl3Player);
 	CCLOG("level 3");
 }
