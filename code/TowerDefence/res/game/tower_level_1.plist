@@ -4,21 +4,33 @@
 <array>
     <dict>
         <key>x</key>
-            <integer>173</integer>
+            <integer>334</integer>
         <key>y</key>
-            <integer>269</integer>
+            <integer>261</integer>
     </dict>
     <dict>
         <key>x</key>
-            <integer>478</integer>
+            <integer>469</integer>
         <key>y</key>
-            <integer>389</integer>
+            <integer>256</integer>
     </dict>
     <dict>
         <key>x</key>
-            <integer>574</integer>
+            <integer>456</integer>
         <key>y</key>
-            <integer>75</integer>
+            <integer>141</integer>
+    </dict>
+    <dict>
+        <key>x</key>
+            <integer>116</integer>
+        <key>y</key>
+            <integer>253</integer>
+    </dict>
+    <dict>
+        <key>x</key>
+            <integer>209</integer>
+        <key>y</key>
+            <integer>167</integer>
     </dict>
 </array>
 </plist>
