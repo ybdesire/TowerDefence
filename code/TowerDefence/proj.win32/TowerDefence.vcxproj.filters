@@ -19,6 +19,12 @@
     <Filter Include="resource\fonts">
       <UniqueIdentifier>{2a51458f-3d12-4c23-8397-a3c9e8831291}</UniqueIdentifier>
     </Filter>
+    <Filter Include="resource\sprite">
+      <UniqueIdentifier>{6d543431-cb7a-4ccf-8fc6-bbee485fc811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\sprite\hero">
+      <UniqueIdentifier>{d1db21e6-d880-4a2d-91a6-452024eccf79}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -37,6 +43,7 @@
     <ClCompile Include="..\Classes\HeroMgr.cpp" />
     <ClCompile Include="..\Classes\MainPlayer.cpp" />
     <ClCompile Include="..\Classes\GameScene.cpp" />
+    <ClCompile Include="..\Classes\Entity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -55,6 +62,7 @@
     <ClInclude Include="..\Classes\HeroMgr.h" />
     <ClInclude Include="..\Classes\MainPlayer.h" />
     <ClInclude Include="..\Classes\GameScene.h" />
+    <ClInclude Include="..\Classes\Entity.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
@@ -88,6 +96,15 @@
     </Image>
     <Image Include="..\res\game\MainSceneBG.jpg">
       <Filter>resource\game</Filter>
+    </Image>
+    <Image Include="..\res\sprite\hero\border_1.png">
+      <Filter>resource\sprite\hero</Filter>
+    </Image>
+    <Image Include="..\res\sprite\hero\hero_1.png">
+      <Filter>resource\sprite\hero</Filter>
+    </Image>
+    <Image Include="..\res\sprite\hero\magic_border_1.png">
+      <Filter>resource\sprite\hero</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
