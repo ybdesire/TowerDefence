@@ -36,6 +36,7 @@
     <ClCompile Include="..\Classes\PosLoadUtil.cpp" />
     <ClCompile Include="..\Classes\HeroMgr.cpp" />
     <ClCompile Include="..\Classes\MainPlayer.cpp" />
+    <ClCompile Include="..\Classes\GameScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -53,6 +54,7 @@
     <ClInclude Include="..\Classes\PosLoadUtil.h" />
     <ClInclude Include="..\Classes\HeroMgr.h" />
     <ClInclude Include="..\Classes\MainPlayer.h" />
+    <ClInclude Include="..\Classes\GameScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

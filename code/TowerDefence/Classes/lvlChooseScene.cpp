@@ -1,4 +1,5 @@
 #include "lvlChooseScene.h"
+#include "GameScene.h"
 #include "MainPlayer.h"
 #include "GetBackLayer.h"
 
@@ -57,33 +58,21 @@ Label* lvlChooseScene::createLvlLabel(const char *lvlstr)
 
 void lvlChooseScene::lvl1(Ref *pSender)
 {
-	this->removeAllChildrenWithCleanup(true);
-	MainPlayer *lvl1Player = MainPlayer::create(1);
-	this->addChild(lvl1Player);
-		
-	auto backlayer = GetBackLayer::create();
-	this->addChild(backlayer);
+	auto scene = GameScene::create(1);
+	Director::getInstance()->replaceScene(scene);
 	CCLOG("level 1");
 }
 
 void lvlChooseScene::lvl2(Ref *pSender)
 {
-	this->removeAllChildrenWithCleanup(true);
-	MainPlayer *lvl2Player = MainPlayer::create(2);
-	this->addChild(lvl2Player);
-	
-	auto backlayer = GetBackLayer::create();
-	this->addChild(backlayer);
+	auto scene = GameScene::create(1);
+	Director::getInstance()->replaceScene(scene);
 	CCLOG("level 2");
 }
 
 void lvlChooseScene::lvl3(Ref *pSender)
 {
-	this->removeAllChildrenWithCleanup(true);
-	MainPlayer *lvl3Player = MainPlayer::create(3);
-	this->addChild(lvl3Player);
-
-	auto backlayer = GetBackLayer::create();
-	this->addChild(backlayer);
+	auto scene = GameScene::create(1);
+	Director::getInstance()->replaceScene(scene);
 	CCLOG("level 3");
 }
