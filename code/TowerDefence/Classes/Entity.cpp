@@ -35,7 +35,31 @@ void Entity::bindSprite(Sprite *sprit)
 
 void Entity::hurtMe(int hurtValue)
 {
-}
+	if(_isDead)
+	{
+		return;
+	}
+
+	if(hurtValue<=getDefence())
+	{
+		hurtValue = 1;
+	}
+
+	int curHP = getHP();
+	int afterHP = curHP - hurtValue;
+
+	onHurt(hurtValue);
+
+	if(afterHP>0)
+	{
+		setHP(afterHP);
+	}
+	else
+	{
+		_isDead = true;
+		onDead();
+	}
+} 
 
 
 bool Entity::isDead()
