@@ -38,5 +38,29 @@
         <key>y</key>
             <integer>316</integer>
     </dict>
+    <dict>
+        <key>x</key>
+            <integer>509</integer>
+        <key>y</key>
+            <integer>243</integer>
+    </dict>
+    <dict>
+        <key>x</key>
+            <integer>150</integer>
+        <key>y</key>
+            <integer>239</integer>
+    </dict>
+    <dict>
+        <key>x</key>
+            <integer>132</integer>
+        <key>y</key>
+            <integer>364</integer>
+    </dict>
+    <dict>
+        <key>x</key>
+            <integer>61</integer>
+        <key>y</key>
+            <integer>252</integer>
+    </dict>
 </array>
 </plist>
