@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "PosBase.h"
+#include "TowerBorder.h"
 
 using namespace cocos2d;
 
@@ -16,7 +17,11 @@ public:
 	
 private:
 	Vector<PosBase *> towerPosList;
+	Vector<TowerBorder *> towerBorderList;
 	void createTowerPos(int level);
+
+	void createTowerBorder();
+	TowerBorder *findClickTowerBorder(Point pos);
 };
 
 #endif

@@ -50,4 +50,18 @@ void HeroMgr::createTowerPos(int level)
 	PosLoadUtil::getInstance()->loadPosWithFile(towerPosList, enTowerPos, towerPath->getCString(), this, level, true);
 }
 
-
+void HeroMgr::createTowerBorder()
+{
+	PosBase *tpos;
+	for(auto ref : towerPosList)
+	{
+		tpos = dynamic_cast<PosBase *>(ref);
+		if(tpos!=NULL)
+		{
+			TowerBorder *tborder = TowerBorder::create();
+			tborder->setPosition(tpos->getPos());
+			this->addChild(tborder);
+			towerBorderList.pushBack(tborder);
+		}
+	}
+}
