@@ -65,3 +65,17 @@ void HeroMgr::createTowerBorder()
 		}
 	}
 }
+
+TowerBorder *HeroMgr::findClickTowerBorder(Point pos)
+{
+	TowerBorder *border;
+	for(auto ref : towerBorderList)
+	{
+		border = dynamic_cast<TowerBorder*>(ref);
+		if(border->isClickMe(pos))
+		{
+			return border;
+		}
+	}
+	return NULL;
+}
